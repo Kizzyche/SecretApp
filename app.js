@@ -34,7 +34,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect('mongodb+srv://admin-kizzy1:kizzy123@reproof-rs58r.mongodb.net/SecretsDB', {useNewUrlParser: true, useUnifiedTopology:true});
+mongoose.connect( {useNewUrlParser: true, useUnifiedTopology:true});
 mongoose.set('useCreateIndex', true);
 
 const userSchema = new mongoose.Schema({
