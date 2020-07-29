@@ -13,6 +13,8 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const FacebookStrategy = require('passport-facebook').Strategy;
 const findOrCreate = require('mongoose-findorcreate');
 
+let PORT = process.env.PORT || 3000
+
 // const bcrypt = require('bcrypt'); this is for salted hashing using bcrypt
 // const saltRounds = 10;
 // const md5 = require('md5'); this is a hashing encryption: this is just mere hashing using md5
@@ -197,6 +199,6 @@ app.get('/logout', function(req, res){
     res.redirect('/');
 })
 
-app.listen(3000, function(){
-    console.log('Starting server at port 3000.....');
+app.listen(PORT, function(){
+    console.log(`Starting server at port ${PORT}.....`);
 });
